@@ -15,6 +15,7 @@ body{
   color:#333;
 }
 
+/* HEADER */
 header{
   background:#0f4d3a;
   color:white;
@@ -22,18 +23,12 @@ header{
   text-align:center;
 }
 
-header h1{
-  margin:0;
-  font-size:28px;
-}
+header h1{margin:0;font-size:28px;}
+header p{margin:5px 0 0;font-size:14px;color:#cde5dc;}
 
-header p{
-  margin:5px 0 0;
-  color:#d4e5dc;
-}
-
+/* HERO */
 .hero{
-  padding:50px 20px;
+  padding:80px 20px;
   text-align:center;
   background:linear-gradient(rgba(15,77,58,0.85),rgba(15,77,58,0.85)),
   url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');
@@ -42,34 +37,31 @@ header p{
   color:white;
 }
 
-.hero h2{
-  font-size:36px;
-  margin-bottom:10px;
-}
-
-.hero p{
-  font-size:18px;
-}
+.hero h2{font-size:40px;margin-bottom:15px;}
+.hero p{font-size:18px;margin-bottom:25px;}
 
 .btn{
   display:inline-block;
-  margin-top:20px;
+  margin:10px;
   padding:12px 25px;
   background:#caa93e;
   color:#0f4d3a;
   text-decoration:none;
   font-weight:600;
   border-radius:5px;
+  transition:0.3s;
 }
+.btn:hover{background:white;}
 
+/* SECTION */
 .section{
-  padding:50px 20px;
+  padding:60px 20px;
   text-align:center;
 }
 
 .section h3{
   font-size:28px;
-  margin-bottom:20px;
+  margin-bottom:30px;
   color:#0f4d3a;
 }
 
@@ -77,34 +69,123 @@ header p{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:20px;
+  gap:25px;
 }
 
 .card{
   background:white;
-  padding:20px;
-  width:260px;
-  border-radius:8px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  padding:25px;
+  width:280px;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
 }
 
+.card:hover{transform:translateY(-5px);}
+.card h4{margin-bottom:10px;color:#0f4d3a;}
+
+/* LEAD FORM */
+.lead-form{
+  background:white;
+  max-width:400px;
+  margin:40px auto;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.lead-form input{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:5px;
+  border:1px solid #ccc;
+  font-family:'Poppins',sans-serif;
+}
+
+.lead-form button{
+  width:100%;
+  padding:12px;
+  background:#0f4d3a;
+  color:white;
+  border:none;
+  border-radius:5px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.lead-form button:hover{
+  background:#072e22;
+}
+
+/* CONTACT */
 .contact{
   background:#0f4d3a;
   color:white;
-  padding:40px 20px;
+  padding:60px 20px;
   text-align:center;
 }
 
-.contact p{
-  margin:8px 0;
+.contact a{
+  color:#caa93e;
+  text-decoration:none;
+  font-weight:600;
 }
 
+/* FOOTER */
 footer{
   background:#072e22;
   color:#aaa;
   text-align:center;
   padding:15px;
   font-size:14px;
+}
+
+/* POPUP */
+.popup-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.popup-box{
+  background:white;
+  padding:30px;
+  width:90%;
+  max-width:400px;
+  border-radius:10px;
+  text-align:center;
+  position:relative;
+}
+
+.popup-box h2{color:#0f4d3a;margin-bottom:10px;}
+
+.popup-btn{
+  display:inline-block;
+  margin:10px 5px;
+  padding:10px 18px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:bold;
+  color:white;
+}
+
+.call-btn{background:#0f4d3a;}
+.whatsapp-btn{background:#25D366;}
+
+.close-popup{
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:22px;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -118,44 +199,83 @@ footer{
 
 <section class="hero">
   <h2>Trusted. Transparent. Reliable.</h2>
-  <p>Open Plots | Clear Documentation | Spot Registration Assistance</p>
-  <a href="#contact" class="btn">Contact Now</a>
+  <p>Premium Open Plots with Clear Documentation & Spot Registration Assistance.</p>
+  <a href="tel:9705040783" class="btn">Call Now</a>
+  <a href="https://wa.me/919705040783" class="btn">WhatsApp Us</a>
 </section>
 
 <section class="section">
-  <h3>Our Services</h3>
+  <h3>Why Choose Us</h3>
   <div class="services">
     <div class="card">
-      <h4>Open Plots</h4>
-      <p>Residential & Agricultural land available.</p>
+      <h4>Clear Titles</h4>
+      <p>100% legally verified plots with transparent documentation.</p>
     </div>
     <div class="card">
-      <h4>Clear Documentation</h4>
-      <p>100% verified and transparent paperwork.</p>
+      <h4>Prime Locations</h4>
+      <p>Strategic locations with high appreciation potential.</p>
     </div>
     <div class="card">
-      <h4>Spot Registration</h4>
-      <p>On-site assistance for smooth registration.</p>
+      <h4>Instant Support</h4>
+      <p>Quick response via Call & WhatsApp anytime.</p>
     </div>
-    <div class="card">
-      <h4>Direct Deals</h4>
-      <p>No middle person. Direct proprietor deals.</p>
-    </div>
+  </div>
+
+  <!-- LEAD FORM -->
+  <div class="lead-form">
+    <h3>Get Free Consultation</h3>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Your Phone Number" required>
+    <button onclick="submitForm()">Submit</button>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <h3>Contact Proprietor</h3>
-  <p><strong>Turab Ali Khan</strong></p>
-  <p>Reddypally – Chegunta – Medak</p>
-  <p>📞 +91 9705040783 </p>
-  <p>📧 akeebjaved74@gmail.com</p>
-  <a href="https://wa.me/916281950855" class="btn">Chat on WhatsApp</a>
+<section class="contact">
+  <h3>Contact Us Today</h3>
+  <p>📞 <a href="tel:9705040783">9705040783</a></p>
+  <p>💬 <a href="https://wa.me/919705040783">Chat on WhatsApp</a></p>
 </section>
 
 <footer>
-  © 2009 GreenArc Estates | Trusted. Transparent. Reliable.
+  © 2026 GreenArc Estates. All Rights Reserved.
 </footer>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <span class="close-popup" onclick="closePopup()">×</span>
+    <h2>Limited Time Offer!</h2>
+    <p>Book your dream plot today and get special pricing!</p>
+    <a href="tel:9705040783" class="popup-btn call-btn">Call Now</a>
+    <a href="https://wa.me/919705040783" class="popup-btn whatsapp-btn">WhatsApp</a>
+  </div>
+</div>
+
+<script>
+window.onload=function(){
+  setTimeout(function(){
+    document.getElementById("popup").style.display="flex";
+  },3000);
+};
+
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+}
+
+function submitForm(){
+  var name=document.getElementById("name").value;
+  var phone=document.getElementById("phone").value;
+
+  if(name==="" || phone===""){
+    alert("Please fill all details");
+    return;
+  }
+
+  var message="Hello, I am "+name+". My phone number is "+phone+". I am interested in your plots.";
+  var whatsappURL="https://wa.me/919705040783?text="+encodeURIComponent(message);
+  window.open(whatsappURL,"_blank");
+}
+</script>
 
 </body>
 </html>
